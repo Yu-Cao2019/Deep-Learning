@@ -21,3 +21,14 @@ nvcc -V
 6. PyCharm - Preference - Python interpreter 
 - Click setting button on the right of Python Interpreter line, and show all
 - Create a new interpreter with SSH Interpreter - Existing server configuration - gcp - add 3 after Interpreter line - change Sync folders to your path in ubuntu
+
+# Potential Problem
+
+```
+Failed to change timestamp of the file '/home/ubuntu/Deep-Learning/Keras_/Lecture_Codes/1-Sequential _API.py'
+```
+You need to set several steps in cloud side:
+```
+sudo chmod -R 777 <name of the directory> (/home/ubuntu/Deep-Learning)
+export DISPLAY=localhost:10.0
+```
