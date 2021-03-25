@@ -29,4 +29,21 @@ cv2.imwrite('/home/resize_ex.png', output)
 
 Source: [Python OpenCV cv2 Resize Image](https://pythonexamples.org/python-opencv-cv2-resize-image/)
 
-3. Use package cv2 to load image file (see the example).
+3. `LabelEncoder()` can encode target lables with value between 0 and n_classes-1. Pay attention: This transformer should be used to encode target value, i.e. y, and not the input, x.
+
+#### Example of LabelEncoder()
+```
+>>> le = preprocessing.LabelEncoder()
+>>> le.fit(["paris", "paris", "tokyo", "amsterdam"])
+LabelEncoder()
+>>> list(le.classes_)
+['amsterdam', 'paris', 'tokyo']
+>>> le.transform(["tokyo", "tokyo", "paris"])
+array([2, 2, 1]...)
+>>> list(le.inverse_transform([2, 2, 1]))
+['tokyo', 'tokyo', 'paris']
+```
+Source: [sklearn.preprocessing.LabelEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
+
+4. `np.save(file, arr)` can save an array to a binary file in NumPy.npy formate.
+
