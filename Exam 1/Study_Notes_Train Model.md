@@ -88,6 +88,16 @@ layer = layer.Dense(
  tf.keras.initializers.VarianceScaling(scale=1.0,mode='gan_in',distribution='truncated_normal',seed=None)
  ```
  
-
+ #### Layer Activation Functions
+ ```
+ from tesorflow.keras import layers
+ from tensorflow.keras import activations
+ 
+ model.add(layers.Dense(Neurons, activation='activation_function'))
+ ```
+ 1. relu
+ 
 
 Source: [Layer weight initializers](https://keras.io/api/layers/initializers/)
+[Layer activation functions](https://keras.io/api/layers/activations/)
+[How To Build Multi-Layer Perceptron Neural Network Models with Keras](https://machinelearningmastery.com/build-multi-layer-perceptron-neural-network-models-keras/)
