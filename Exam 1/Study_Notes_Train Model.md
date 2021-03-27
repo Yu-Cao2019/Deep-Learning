@@ -57,7 +57,37 @@ layer = layer.Dense(
  tf.keras.initializers.Ones()
  ```
  6. GlorotNormal
+ Draws samples from a truncated normal distribution centered on 0 with `stddev = sqrt(2 / (fan_in + fan_out))` where `fan_in` is the number of input units in the weight tensor and `fan_out` is the number of output units in the weight tensor.
+ ```
+ tf.keras.initializers.GlorotNormal(seed=None)
+ ```
+ 7. Glorotuniform
+ Draws samples from a uniform distribution within `[-limit, limit]`, where `limit = sqrt(6 / (fan_in + fan_out))` (`fan_in` is the number of input units in the weight tensor and `fan_out` is the number of output units).
+ ```
+ tf.keras.initializers.GlorotUniform(seed=None)
+ ```
+ 8. Identity
+ Initializer that generates the identity matrix.
+ ```
+ tf.keras.initializers.Identity(gain=1.0)
+ ```
+ where `gain` means the multiplicative factor to apply to the identity matrix.
+ 9. Orthogonal
+ Initializer that generates the orthogonal matrix.
+ ```
+ tf.keras.initializers.orthogonal(gain=1.0, seed=None)
+ ```
+ 10. Constant
+ Initializer that generates with constant values.
+ ```
+ tf.keras.initializers.Constant(value=0)
+ ```
+ 11. VarianceScaling
+ Initializer capable of adapting its scale to the shape of weights tensors.
+ ```
+ tf.keras.initializers.VarianceScaling(scale=1.0,mode='gan_in',distribution='truncated_normal',seed=None)
+ ```
  
- 8. 
+
 
 Source: [Layer weight initializers](https://keras.io/api/layers/initializers/)
